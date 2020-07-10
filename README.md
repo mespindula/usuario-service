@@ -2,8 +2,8 @@
 API Spring Boot JWT
 
 # Para obter Token
-api/sign-up
-{
- username = cliente
- password = 123
-}
+    api/sign-up
+    {
+     username = cliente
+     password = 123
+    }
