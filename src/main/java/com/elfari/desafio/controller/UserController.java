@@ -1,6 +1,7 @@
 package com.elfari.desafio.controller;
 
 import java.util.Calendar;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -61,6 +62,12 @@ public class UserController {
      public Iterable<User> list() {         
          Iterable<User> iterable = userRepository.findAll();
          return iterable;
+     }
+     
+     @GetMapping("/{id}")
+     @ApiOperation(value = "Retorna o usuário conforme ID informado")
+     public Optional<User> get(@PathVariable final Long id) {       
+         return userRepository.findById(id);
      }
 
 }
